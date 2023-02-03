@@ -1,9 +1,8 @@
 const express = require('express')
 const cors = require('cors');
 const { MongoClient, ServerApiVersion,ObjectId } = require('mongodb');
-// const { MongoClient, ServerApiVersion, ObjectId, } = require('mongodb');
-require('dotenv').config()
 
+require('dotenv').config()
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -12,29 +11,6 @@ const port = process.env.PORT || 5000;
 //middlewares
 app.use(cors())
 app.use(express.json())
-
-
-// const ObjectId = require('mongodb').ObjectId;
-
-
-
-
-
-
-// const uri = "mongodb+srv://studentForm:4JB7ZAiynopdRaCg@cluster0.ui8slz3.mongodb.net/?retryWrites=true&w=majority";
-// console.log(uri);
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-
-
-
-
-// // const { MongoClient } = require('mongodb');
-// const uri = "mongodb+srv://studentForm:4JB7ZAiynopdRaCg@cluster0.ui8slz3.mongodb.net/?retryWrites=true&w=majority";
-// console.log(uri);
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-
-
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.ui8slz3.mongodb.net/?retryWrites=true&w=majority`;
